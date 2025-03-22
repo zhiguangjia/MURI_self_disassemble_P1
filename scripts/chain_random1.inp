@@ -1,0 +1,62 @@
+* test
+*
+
+!if @?toppar eq 0    set toppar = "~zgjia/toppar"
+!open read card unit 10 name @toppar/top_all22_prot_cmap.inp
+!read  rtf card unit 10
+!open read card unit 10 name @toppar/par_all22_prot_cmap.inp
+!read para card unit 10
+!close unit 10
+
+! Read topology and parameter files
+stream toppar.str
+
+
+read sequence card
+* sequence of K
+12
+GLM3 GLM1 GLM1 GLM3 GLM2 GLM1 GLM2 GLM2 GLM1 GLM2 GLM1 GLY
+!GLM1 GLM2  GLN  GLN  GLN  GLN  GLN  GLN  GLN  GLN GLN  GLN  GLN
+!GLY GLY TRP ALA ALA LEU ALA ALA HIS ALA ALA PRO ALA LEU ALA ALA ALA LEU ALA HIS ALA ALA ALA SER ARG SER ARG SER ARG SER ARG
+generate PEPT first NTER last CTER setup
+! His neutral=hse
+
+coor init
+ic param
+
+!set len = 31
+!ic dele dihe fourth sele type O .and. resi @len  end
+!IC EDIT
+!DIHE 1  CY  1  N  1 CA  1  C -57.8  ! PHI
+!DIHE @len  N  @len CA  @len  C  @len  NT -47.0  ! PSI
+!END
+
+!set i = 2
+!label ic_edit
+
+!calc j = @i - 1
+!calc m = @i + 1
+
+!IC EDIT
+!DIHE @j  C  @i  N  @i CA  @i  C -57.8  ! PHI
+!DIHE @i  N  @i CA  @i  C  @m  N -47.0  ! PSI
+!END
+
+!incr i by 1
+!if i .lt. @len goto ic_edit
+
+ic seed 1 N 1 CA 1 C
+ic build
+coor stat
+
+coor copy comp
+
+cons harm select .not. hydrogen end force 1
+mini sd nstep 100 nprint 10 step 0.01
+
+set target = random_1
+write coor pdb name @target.pdb
+write psf card name @target.psf
+
+stop
+
