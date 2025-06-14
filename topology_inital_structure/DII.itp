@@ -1,0 +1,143 @@
+;
+
+[moleculetype]
+; molname      nrexcl
+  DII          1
+
+[atoms]
+; id    type    resnr   residu  atom    cgnr    charge
+   1    C1       1      DII    C1       1      0       72
+   2    SC4      1      DII    SC1A     2      0       72
+   3   TP1dq      1      DII    SC2A     3      0.5    72
+   4    SC5      1      DII    SC3A     4      0       72      
+   5    SC5      1      DII    SC4A     5      0       72
+   6   TN6d      1      DII    C1A      6      0       72
+   7    C1       1      DII    C2A      7      0       72
+   8    C1       1      DII    C3A      8      0       72
+   9    C1       1      DII    C4A      9      0       72
+  10    C1       1      DII    C5A     10      0       72
+  11    SC4      1      DII    SC1B    11      0       72
+  12   TP1dq      1      DII    SC2B    12      0.5    72
+  13    SC5      1      DII    SC3B    13      0       72
+  14    SC5      1      DII    SC4B    14      0       72
+  15   TN6d      1      DII    C1B     15      0       72
+  16    C1       1      DII    C2B     16      0       72 
+  17    C1       1      DII    C3B     17      0       72
+  18    C1       1      DII    C4B     18      0       72
+  19    C1       1      DII    C5B     19      0       72
+
+
+;  elnedyn22/aminoacids.ff only use constrain 
+; martini use both bond and restrain  dihedrals
+
+[bonds]
+;  i  j         funct   length  force.c.
+   1  2         1       0.255  1250      ;  actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+   3  6         1       0.255  1250      ;  connect lipid tail
+   2     3    1       0.220   4000 ; 1250 ; 1000000
+   2     4    1       0.255   4000 ; 1250 ; 1000000
+   3     5    1       0.250   4000 ; 1250 ; 1000000
+   4     5    1       0.280   4000 ; 1250 ; 1000000
+   2     5    1       0.35454 4000 ; 1250 ; 1000000
+   6  7         1       0.47    1250    
+   7  8         1       0.47    1250    
+   8  9         1       0.47    1250    
+   9 10         1       0.47    1250    
+
+
+   1  11         1       0.255  1250      ;  actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+   12  15         1       0.255 1250      ;  connect lipid tail
+  11    12    1       0.220  4000 ;  1000000
+  11    13    1       0.255  4000 ;  1000000
+  12    14    1       0.250  4000 ;  1000000
+  13    14    1       0.280  4000 ;  1000000
+  11    14    1       0.35454 4000 ; 1250 ; 1000000
+   15  16         1       0.47    1250
+   16  17         1       0.47    1250
+   17  18        1       0.47    1250
+   18  19         1       0.47    1250
+
+
+;[ constraints ]
+;  i     j   funct   length
+;   2     3    1       0.220
+;   2     4    1       0.255
+;   3     5    1       0.250
+;   4     5    1       0.280
+;   2     5    1       0.35454
+
+;  11    12    1       0.220
+;  11    13    1       0.255
+;  12    14    1       0.250
+;  13    14    1       0.280
+;  11    14    1       0.35454
+
+
+[angles]
+;  i  j  k      funct   angle   force.c.
+
+   2     1   11      2       180.0   25.0 
+
+
+   1     2    3       2   142.000   30.0  ; actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+; BB   SC1  SC2  
+   1     2    5       2   143.000   20.0  ; actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+; BB   SC1  SC4
+   1     2    4       2   104.000   50.0  ; actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+; BB   SC1  SC3
+
+   7     3    2       2   142.000   30.0  ; connect lipid tail
+   7     3    4       2   143.000   20.0
+; BB   SC1  SC3  , symmetry to the above 
+   7     3    5       2   104.000   50.0
+
+   4  2  6      2       180.0   25.0 ;  connect TRp and lipid
+   2  6  7      2       180.0   25.0    
+   6  7  8      2       180.0   25.0    
+   8  9 10      2       180.0   25.0    
+
+
+   1    11   12       2   142.000   30.0  ; actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+; BB   SC1  SC2
+   1    11   14       2   143.000   20.0  ; actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+; BB   SC1  SC4
+   1    11   13       2   104.000   50.0  ; actually connect to CB  but in here connect to CD1 , but CB and CD1 in same bead so just no change .....
+; BB   SC1  SC3
+
+  16    12   11       2   142.000   30.0  ; connect lipid tail
+  16    12   13       2   143.000   20.0
+; BB   SC1  SC3  , symmetry to the above
+  16    12   14       2   104.000   50.0
+
+  13 12 15      2       180.0   25.0 ;  connect TRp and lipid
+  12 15 16      2       180.0   25.0
+  15 16 17      2       180.0   25.0
+  17 18 19      2       180.0   25.0
+
+
+
+
+[dihedrals]
+;  i     j    k    l   funct   angle  force.c.
+   2     3    4    5       2    180.0    200.0    ; to keep plane fixed
+
+  11    12   13   14       2    180.0    200.0    ; to keep plane fixed      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

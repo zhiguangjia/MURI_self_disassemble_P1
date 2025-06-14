@@ -217,23 +217,23 @@ git hub part
 
 git init
 git add  readme.txt
-git commit -m "voltage gating of core MT"
+git commit -m "MURI_self_disassemble_P1"
 
  git add *
-git commit -m "V5"
+git commit -m "V3"
 
 
-git remote add origin git@github.com:zhiguangjia/Votage_gating_Core-MT.git
+git remote add origin git@github.com:zhiguangjia/MURI_self_disassemble_P1.git
 git branch -M main
 git push -u origin main
 
 ***  for later change:
-#git add BC5_contact_probability.py
-#git commit -m "Bc5 contact probability from a trajectory file"
 
+git add .
 
-#git add Fit_EC50.py
-#git commit -m "Fit EC50 with fit_curve and double checked with numarical simulation"
+git commit -m "revision_1"
+
+git push origin main
 
 
 username zhiguangjia
