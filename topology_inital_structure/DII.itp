@@ -9,8 +9,8 @@
    1    C1       1      DII    C1       1      0       72
    2    SC4      1      DII    SC1A     2      0       72
    3   TP1dq      1      DII    SC2A     3      0.5    72
-   4    SC5      1      DII    SC3A     4      0       72      
-   5    SC5      1      DII    SC4A     5      0       72
+   4    TC5      1      DII    SC3A     4      0       72      
+   5    TC5      1      DII    SC4A     5      0       72
    6   TN6d      1      DII    C1A      6      0       72
    7    C1       1      DII    C2A      7      0       72
    8    C1       1      DII    C3A      8      0       72
@@ -18,8 +18,8 @@
   10    C1       1      DII    C5A     10      0       72
   11    SC4      1      DII    SC1B    11      0       72
   12   TP1dq      1      DII    SC2B    12      0.5    72
-  13    SC5      1      DII    SC3B    13      0       72
-  14    SC5      1      DII    SC4B    14      0       72
+  13    TC5      1      DII    SC3B    13      0       72
+  14    TC5      1      DII    SC4B    14      0       72
   15   TN6d      1      DII    C1B     15      0       72
   16    C1       1      DII    C2B     16      0       72 
   17    C1       1      DII    C3B     17      0       72

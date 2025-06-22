@@ -9,7 +9,7 @@
 ; Souza, P C T; Alessandri, R; Barnoud, J; Thallmair, S; Faustino, I; Grünewald, F; Patmanidis, I; Abdizadeh, H; Bruininks, B M H; Wassenaar, T A; Kroon, P C; Melcr, J; Nieto, V; Corradi, V; Khan, H M; Domański, J; Javanainen, M; Martinez-Seara, H; Reuter, N; Best, R B; Vattulainen, I; Monticelli, L; Periole, X; Tieleman, D P; de Vries, A H; Marrink, S J;  Nature Methods 2021; 10.1038/s41592-021-01098-3
 
 [ moleculetype ]
-peptide_1 1
+peptide_2 1
 
 [ atoms ]
  1 P2    1 GLM1 BB   1   0 
@@ -75,7 +75,7 @@ peptide_1 1
 61 SC4  11 GLM1 SC2 61 0.0 
 62 TC5  11 GLM1 SC3 62 0.0 
 63 TC5  11 GLM1 SC4 63 0.0 
-64 SC2  11 GLM1 CTE 64 0.0
+64 SC2  11 GLM1 CTE 64   0 
 
 [ position_restraints ]
 #ifdef POSRES
