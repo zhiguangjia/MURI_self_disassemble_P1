@@ -258,6 +258,9 @@ git commit -m "revision_1_V2"
 git push origin main --force  # because delete some file in github online 
 
 
+
+git add .
+
 git commit -m "revision_1_V3"
 
 git push origin main
