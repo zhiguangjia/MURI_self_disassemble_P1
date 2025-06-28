@@ -207,6 +207,16 @@ in Figure_2
           cp /home/zgjia/Project/MURI/2015ACS/Manuscript_11mer/Fig_dissemble_80mer/disassemble_sasa_average_80_running_average.agr    Figure_5/10mer_SASA.agr 
 
 
+
+################################################################
+
+   peptide sequence correction
+
+################################################################
+
+ 1  as the peptide 1 mistakely use peptide 2 sequence, after copy sequence here, delete peptide 1 , and shift the number
+
+
 ***************************************************
 
 
@@ -239,6 +249,18 @@ git push origin main
 username zhiguangjia
  token see laptoop code dataase
 
+#### 6.21  change to version 2
+
+git add .
+
+git commit -m "revision_1_V2"
+
+git push origin main --force  # because delete some file in github online 
+
+
+git commit -m "revision_1_V3"
+
+git push origin main
 
 
 
