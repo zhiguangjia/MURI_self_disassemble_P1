@@ -16,8 +16,6 @@
  ** .agr will be a xmgrace save file, which has raw data inside it
 
 
- 
-
 ################################################################
 
 
@@ -208,6 +206,21 @@ in Figure_2
 
 
 
+
+################################################################
+
+   Alternative model  |  Standard Martini 3 model
+
+################################################################
+
+ This section is made during review 2025 Jun-Oct  , where a model is made with standard martini base only
+
+
+
+
+
+
+
 ################################################################
 
    peptide sequence correction
@@ -265,6 +278,14 @@ git commit -m "revision_1_V3"
 
 git push origin main
 
+
+
+
+git add .
+
+git commit -m "revision_1_V3"
+
+git push origin main
 
 
 

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cp /home/zgjia/Project/MURI/2015ACS/CG_monomer/random_11mer_new_V2_review_1/random_CG_*.itp .
+
+cp /home/zgjia/Project/MURI/2015ACS/CG_simulation/bCA_test_20fs/molecule_0.itp    bca_temp.itp
+
+

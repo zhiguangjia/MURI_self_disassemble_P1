@@ -1,0 +1,8 @@
+
+cp -r /home/zgjia/Project/MURI/2015ACS/CG_simulation_11mer_review_1_V2_P3/toppar  .
+
+# the part use for martinize2  
+
+cp /home/zgjia/Software/Python3_martini_review/miniconda3/lib/python3.6/site-packages//vermouth/data/force_fields/martini3001/aminoacids.ff .
+
+
